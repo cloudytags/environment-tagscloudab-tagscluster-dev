@@ -1,20 +1,25 @@
 cluster:
-  clusterName: ""
-  environmentGitOwner: ""
-  project: ""
+  clusterName: tagscloudab-tagscluster
+  environmentGitOwner: cloudytags
+  gitKind: github
+  gitName: github
+  gitServer: https://github.com
+  namespace: jx
+  project: jxproject
   provider: gke
-  zone: ""
-gitops: false
+  zone: asia-south1-a
 environments:
 - key: dev
 - key: staging
 - key: production
+gitops: true
 ingress:
-  domain: ""
-  externalDNS: false
+  domain: tagscloud.org
+  externalDNS: true
+  namespaceSubDomain: -jx.
   tls:
-    email: ""
-    enabled: false
+    email: rajat.tyagi.us@gmail.com
+    enabled: true
     production: false
 kaniko: true
 secretStorage: local
@@ -28,4 +33,7 @@ storage:
   repository:
     enabled: false
     url: ""
+versionStream:
+  ref: ""
+  url: ""
 webhook: prow
