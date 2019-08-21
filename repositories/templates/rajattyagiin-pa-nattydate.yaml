@@ -1,0 +1,14 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  name: rajattyagiin-pa-nattydate
+spec:
+  description: Imported application for rajattyagiin/pa-nattydate
+  org: rajattyagiin
+  provider: https://github.com
+  providerName: github
+  repo: pa-nattydate
+  scheduler:
+    kind: ""
+    name: ""

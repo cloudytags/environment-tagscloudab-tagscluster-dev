@@ -1,0 +1,14 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  name: rajattyagiin-program-ab
+spec:
+  description: Imported application for rajattyagiin/program-ab
+  org: rajattyagiin
+  provider: https://github.com
+  providerName: github
+  repo: program-ab
+  scheduler:
+    kind: ""
+    name: ""
