@@ -1,0 +1,14 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  name: cloudytags-httpssgo
+spec:
+  description: Imported application for cloudytags/httpssgo
+  org: cloudytags
+  provider: https://github.com
+  providerName: github
+  repo: httpssgo
+  scheduler:
+    kind: ""
+    name: ""

@@ -1,0 +1,14 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  name: cloudytags-environment-tagsab-staging
+spec:
+  description: Imported application for cloudytags/environment-tagsab-staging
+  org: cloudytags
+  provider: https://github.com
+  providerName: github
+  repo: environment-tagsab-staging
+  scheduler:
+    kind: ""
+    name: ""
