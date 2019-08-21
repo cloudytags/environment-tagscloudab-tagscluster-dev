@@ -1,0 +1,369 @@
+apiVersion: v1
+data:
+  config.yaml: |
+    branch-protection:
+      orgs:
+        cloudytags:
+          repos:
+            environment-tagsab-staging:
+              required_status_checks:
+                contexts:
+                - promotion-build
+            environment-tagscloudab-tagscluster-production:
+              required_status_checks:
+                contexts:
+                - promotion-build
+            environment-tagscloudab-tagscluster-staging:
+              required_status_checks:
+                contexts:
+                - promotion-build
+            httpssgo:
+              required_status_checks:
+                contexts:
+                - promotion-build
+            nqsr:
+              required_status_checks:
+                contexts:
+                - promotion-build
+            proxygolang:
+              required_status_checks:
+                contexts:
+                - promotion-build
+        rajattyagiin:
+          repos:
+            mavenqs:
+              required_status_checks:
+                contexts:
+                - promotion-build
+            pa-emailchat:
+              required_status_checks:
+                contexts:
+                - promotion-build
+            pa-emailparser:
+              required_status_checks:
+                contexts:
+                - promotion-build
+            pa-emailparser1:
+              required_status_checks:
+                contexts:
+                - promotion-build
+            pa-nattydate:
+              required_status_checks:
+                contexts:
+                - promotion-build
+            pa-recurrent-nattydatetime:
+              required_status_checks:
+                contexts:
+                - promotion-build
+            pa-scheduler-kue-rediscluster:
+              required_status_checks:
+                contexts:
+                - promotion-build
+            program-ab:
+              required_status_checks:
+                contexts:
+                - promotion-build
+            program-ab-bot:
+              required_status_checks:
+                contexts:
+                - promotion-build
+      protect-tested-repos: true
+      required_status_checks:
+        contexts:
+        - promotion-build
+    deck:
+      spyglass: {}
+    gerrit: {}
+    owners_dir_blacklist:
+      default: null
+      repos: null
+    plank: {}
+    pod_namespace: jx
+    postsubmits:
+      /emailchat-service:
+      - agent: tekton
+        branches:
+        - master
+        context: ""
+        name: promotion
+      /pa-emailchat:
+      - agent: tekton
+        branches:
+        - master
+        context: ""
+        name: promotion
+      /pa-nattydate:
+      - agent: tekton
+        branches:
+        - master
+        context: ""
+        name: promotion
+      cloudytags/environment-tagsab-staging:
+      - agent: tekton
+        branches:
+        - master
+        context: ""
+        name: promotion
+      cloudytags/environment-tagscloudab-tagscluster-production:
+      - agent: tekton
+        branches:
+        - master
+        context: ""
+        name: promotion
+      cloudytags/environment-tagscloudab-tagscluster-staging:
+      - agent: tekton
+        branches:
+        - master
+        context: ""
+        name: promotion
+      cloudytags/httpssgo:
+      - agent: tekton
+        branches:
+        - master
+        context: ""
+        name: promotion
+      cloudytags/nqsr:
+      - agent: tekton
+        branches:
+        - master
+        context: ""
+        name: promotion
+      cloudytags/proxygolang:
+      - agent: tekton
+        branches:
+        - master
+        context: ""
+        name: promotion
+      rajattyagiin/mavenqs:
+      - agent: tekton
+        branches:
+        - master
+        context: ""
+        name: promotion
+      rajattyagiin/pa-emailchat:
+      - agent: tekton
+        branches:
+        - master
+        context: ""
+        name: promotion
+      rajattyagiin/pa-emailparser:
+      - agent: tekton
+        branches:
+        - master
+        context: ""
+        name: promotion
+      rajattyagiin/pa-emailparser1:
+      - agent: tekton
+        branches:
+        - master
+        context: ""
+        name: promotion
+      rajattyagiin/pa-nattydate:
+      - agent: tekton
+        branches:
+        - master
+        context: ""
+        name: promotion
+      rajattyagiin/pa-recurrent-nattydatetime:
+      - agent: tekton
+        branches:
+        - master
+        context: ""
+        name: promotion
+      rajattyagiin/pa-scheduler-kue-rediscluster:
+      - agent: tekton
+        branches:
+        - master
+        context: ""
+        name: promotion
+      rajattyagiin/program-ab:
+      - agent: tekton
+        branches:
+        - master
+        context: ""
+        name: promotion
+      rajattyagiin/program-ab-bot:
+      - agent: tekton
+        branches:
+        - master
+        context: ""
+        name: promotion
+    presubmits:
+      /emailchat-service:
+      - agent: tekton
+        always_run: true
+        context: promotion-build
+        name: promotion-build
+        rerun_command: /test this
+        trigger: (?m)^/test( all| this),?(\s+|$)
+      /pa-emailchat:
+      - agent: tekton
+        always_run: true
+        context: promotion-build
+        name: promotion-build
+        rerun_command: /test this
+        trigger: (?m)^/test( all| this),?(\s+|$)
+      /pa-nattydate:
+      - agent: tekton
+        always_run: true
+        context: promotion-build
+        name: promotion-build
+        rerun_command: /test this
+        trigger: (?m)^/test( all| this),?(\s+|$)
+      cloudytags/environment-tagsab-staging:
+      - agent: tekton
+        always_run: true
+        context: promotion-build
+        name: promotion-build
+        rerun_command: /test this
+        trigger: (?m)^/test( all| this),?(\s+|$)
+      cloudytags/environment-tagscloudab-tagscluster-production:
+      - agent: tekton
+        always_run: true
+        context: promotion-build
+        name: promotion-build
+        rerun_command: /test this
+        trigger: (?m)^/test( all| this),?(\s+|$)
+      cloudytags/environment-tagscloudab-tagscluster-staging:
+      - agent: tekton
+        always_run: true
+        context: promotion-build
+        name: promotion-build
+        rerun_command: /test this
+        trigger: (?m)^/test( all| this),?(\s+|$)
+      cloudytags/httpssgo:
+      - agent: tekton
+        always_run: true
+        context: promotion-build
+        name: promotion-build
+        rerun_command: /test this
+        trigger: (?m)^/test( all| this),?(\s+|$)
+      cloudytags/nqsr:
+      - agent: tekton
+        always_run: true
+        context: promotion-build
+        name: promotion-build
+        rerun_command: /test this
+        trigger: (?m)^/test( all| this),?(\s+|$)
+      cloudytags/proxygolang:
+      - agent: tekton
+        always_run: true
+        context: promotion-build
+        name: promotion-build
+        rerun_command: /test this
+        trigger: (?m)^/test( all| this),?(\s+|$)
+      rajattyagiin/mavenqs:
+      - agent: tekton
+        always_run: true
+        context: promotion-build
+        name: promotion-build
+        rerun_command: /test this
+        trigger: (?m)^/test( all| this),?(\s+|$)
+      rajattyagiin/pa-emailchat:
+      - agent: tekton
+        always_run: true
+        context: promotion-build
+        name: promotion-build
+        rerun_command: /test this
+        trigger: (?m)^/test( all| this),?(\s+|$)
+      rajattyagiin/pa-emailparser:
+      - agent: tekton
+        always_run: true
+        context: promotion-build
+        name: promotion-build
+        rerun_command: /test this
+        trigger: (?m)^/test( all| this),?(\s+|$)
+      rajattyagiin/pa-emailparser1:
+      - agent: tekton
+        always_run: true
+        context: promotion-build
+        name: promotion-build
+        rerun_command: /test this
+        trigger: (?m)^/test( all| this),?(\s+|$)
+      rajattyagiin/pa-nattydate:
+      - agent: tekton
+        always_run: true
+        context: promotion-build
+        name: promotion-build
+        rerun_command: /test this
+        trigger: (?m)^/test( all| this),?(\s+|$)
+      rajattyagiin/pa-recurrent-nattydatetime:
+      - agent: tekton
+        always_run: true
+        context: promotion-build
+        name: promotion-build
+        rerun_command: /test this
+        trigger: (?m)^/test( all| this),?(\s+|$)
+      rajattyagiin/pa-scheduler-kue-rediscluster:
+      - agent: tekton
+        always_run: true
+        context: promotion-build
+        name: promotion-build
+        rerun_command: /test this
+        trigger: (?m)^/test( all| this),?(\s+|$)
+      rajattyagiin/program-ab:
+      - agent: tekton
+        always_run: true
+        context: promotion-build
+        name: promotion-build
+        rerun_command: /test this
+        trigger: (?m)^/test( all| this),?(\s+|$)
+      rajattyagiin/program-ab-bot:
+      - agent: tekton
+        always_run: true
+        context: promotion-build
+        name: promotion-build
+        rerun_command: /test this
+        trigger: (?m)^/test( all| this),?(\s+|$)
+    prowjob_namespace: jx
+    push_gateway: {}
+    sinker: {}
+    tide:
+      context_options:
+        from-branch-protection: true
+        required-if-present-contexts: null
+        skip-unknown-contexts: false
+      queries:
+      - labels:
+        - approved
+        missingLabels:
+        - do-not-merge
+        - do-not-merge/hold
+        - do-not-merge/work-in-progress
+        - needs-ok-to-test
+        - needs-rebase
+        repos:
+        - cloudytags/environment-tagsab-staging
+        - cloudytags/httpssgo
+        - cloudytags/nqsr
+        - cloudytags/proxygolang
+        - /emailchat-service
+        - /pa-emailchat
+        - /pa-nattydate
+        - rajattyagiin/mavenqs
+        - rajattyagiin/pa-emailchat
+        - rajattyagiin/pa-emailparser
+        - rajattyagiin/pa-emailparser1
+        - rajattyagiin/pa-nattydate
+        - rajattyagiin/pa-recurrent-nattydatetime
+        - rajattyagiin/pa-scheduler-kue-rediscluster
+        - rajattyagiin/program-ab
+        - rajattyagiin/program-ab-bot
+      - missingLabels:
+        - do-not-merge
+        - do-not-merge/hold
+        - do-not-merge/work-in-progress
+        - needs-ok-to-test
+        - needs-rebase
+        repos:
+        - cloudytags/environment-tagscloudab-tagscluster-production
+        - cloudytags/environment-tagscloudab-tagscluster-staging
+      target_url: http://deck-jx.tagscloud.org
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2019-05-19T10:20:30Z"
+  name: config
+  namespace: jx
+  resourceVersion: "32917751"
+  selfLink: /api/v1/namespaces/jx/configmaps/config
+  uid: bad0f767-7a1f-11e9-884b-42010aa0003a
