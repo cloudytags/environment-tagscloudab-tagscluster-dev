@@ -1,0 +1,7 @@
+dependencies:
+- host: github.com
+  owner: cloudytags
+  repo: environment-tagscloudab-tagscluster-dev
+  url: https://github.com/cloudytags/environment-tagscloudab-tagscluster-dev
+  version: "1.0"
+  versionURL: ""

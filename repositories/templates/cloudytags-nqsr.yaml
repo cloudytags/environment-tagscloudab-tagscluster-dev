@@ -1,0 +1,14 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  name: cloudytags-nqsr
+spec:
+  description: Imported application for cloudytags/nqsr
+  org: cloudytags
+  provider: https://github.com
+  providerName: github
+  repo: nqsr
+  scheduler:
+    kind: ""
+    name: ""
