@@ -14,12 +14,12 @@ environments:
 - key: production
 gitops: true
 ingress:
-  domain: tagscloud.org
-  externalDNS: true
+  domain: 34.93.128.238.nip.io
+  externalDNS: false
   namespaceSubDomain: -jx.
   tls:
-    email: rajat.tyagi.us@gmail.com
-    enabled: true
+    email: ""
+    enabled: false
     production: false
 kaniko: true
 secretStorage: local
