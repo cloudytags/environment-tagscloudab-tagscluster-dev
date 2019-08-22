@@ -2,10 +2,10 @@ apiVersion: jenkins.io/v1
 kind: SourceRepository
 metadata:
   creationTimestamp: null
-  name: rajattyagiin-pa-emailchat
+  name: rajattyagius-pa-emailchat
 spec:
   description: Imported application for rajattyagiin/pa-emailchat
-  org: rajattyagiin
+  org: rajattyagius
   provider: https://github.com
   providerName: github
   repo: pa-emailchat
