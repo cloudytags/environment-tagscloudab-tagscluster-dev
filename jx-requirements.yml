@@ -1,20 +1,24 @@
 cluster:
-  clusterName: ""
-  environmentGitOwner: ""
-  project: ""
+  clusterName: tagscloudab-tagscluster
+  environmentGitOwner: rajattyagius
+  gitKind: github
+  gitName: github
+  gitServer: https://github.com
+  namespace: jx
+  project: jxproject
   provider: gke
-  zone: ""
-gitops: false
+  zone: asia-south1-a
+gitops: true
 environments:
 - key: dev
 - key: staging
 - key: production
 ingress:
-  domain: ""
-  externalDNS: false
+  domain: tagscloud.org
+  externalDNS: true
   tls:
-    email: ""
-    enabled: false
+    email: rajat.tyagi.us@gmail.com
+    enabled: true
     production: false
 kaniko: true
 secretStorage: local
