@@ -8,14 +8,15 @@ cluster:
   project: jxproject
   provider: gke
   zone: asia-south1-a
-gitops: true
 environments:
 - key: dev
 - key: staging
 - key: production
+gitops: true
 ingress:
   domain: tagscloud.org
   externalDNS: true
+  namespaceSubDomain: -jx.
   tls:
     email: rajat.tyagi.us@gmail.com
     enabled: true
@@ -32,4 +33,7 @@ storage:
   repository:
     enabled: false
     url: ""
+versionStream:
+  ref: ""
+  url: ""
 webhook: prow
