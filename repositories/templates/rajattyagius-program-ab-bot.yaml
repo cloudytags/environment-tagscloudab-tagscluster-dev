@@ -1,0 +1,14 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  name: rajattyagius-program-ab-bot
+spec:
+  description: Imported application for rajattyagiin/program-ab-bot
+  org: rajattyagius
+  provider: https://github.com
+  providerName: github
+  repo: program-ab-bot
+  scheduler:
+    kind: ""
+    name: ""

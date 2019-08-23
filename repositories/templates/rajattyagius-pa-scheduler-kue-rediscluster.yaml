@@ -1,0 +1,14 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  name: rajattyagius-pa-scheduler-kue-rediscluster
+spec:
+  description: Imported application for rajattyagiin/pa-scheduler-kue-rediscluster
+  org: rajattyagius
+  provider: https://github.com
+  providerName: github
+  repo: pa-scheduler-kue-rediscluster
+  scheduler:
+    kind: ""
+    name: ""
