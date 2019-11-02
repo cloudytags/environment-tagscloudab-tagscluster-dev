@@ -1,3 +1,7 @@
+autoUpdate:
+  enabled: false
+  schedule: ""
+bootConfigURL: https://github.com/rajattyagius/environment-tagscloudab-tagscluster-dev
 cluster:
   clusterName: tagscloudab-tagscluster
   environmentGitOwner: rajattyagius
@@ -9,9 +13,33 @@ cluster:
   provider: gke
   zone: asia-south1-a
 environments:
-- key: dev
-- key: staging
-- key: production
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: dev
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: staging
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: production
 gitops: true
 ingress:
   domain: tagscloud.org
@@ -24,6 +52,9 @@ ingress:
 kaniko: true
 secretStorage: local
 storage:
+  backup:
+    enabled: false
+    url: ""
   logs:
     enabled: false
     url: ""
@@ -33,7 +64,9 @@ storage:
   repository:
     enabled: false
     url: ""
+vault: {}
+velero: {}
 versionStream:
   ref: ""
-  url: ""
+  url: https://github.com/jenkins-x/jenkins-x-versions.git
 webhook: prow
