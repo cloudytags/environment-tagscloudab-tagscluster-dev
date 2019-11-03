@@ -1,0 +1,8 @@
+adminUser:
+  password: local:tagscloudab-tagscluster/adminUser:password
+  username: admin
+enableDocker: false
+pipelineUser:
+  token: local:tagscloudab-tagscluster/pipelineUser:token
+  username: rajattyagius
+prow: {}
